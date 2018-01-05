@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详情页</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/list.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/list.js"></script>
+	<script>
+		jQuery(function($){
+			$('#pageHeader').load('common.html #header');
+			$('#pageFooter').load('common.html #links,#footer');
+		});
+	</script>
+</head>
+<body>
+	<div class="all">
+		<header id="pageHeader"></header>
+		<div id="main">
+			<div class="container">
+				<div class="search clearfix">
+					<div class="search_l fl">
+						<span>首页 </span><i>&gt;</i>
+					</div>
+					<div class="search_c fl">
+						<input type="text" name="sousuo" id="sousuo" placeholder="在当前条件下搜索">
+					</div>
+					<div class="search_r fr">
+						共找到 <span></span> 件商品
+					</div>
+				</div>
+				<div class="fenlei">
+					<div class="pinpai clearfix">
+						<div class="pinpai_l fl">
+							<span>品牌</span>
+						</div>
+						<ul class="pinpai_c fl clearfix">
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+							<li><a href="#"><img src="../img/liangpinpuzi.jpg" alt=""></a></li>
+						</ul>
+						<div class="pinpai_r fr">
+							<span class="more">更多 +</span>
+							<span class="open">展开</span>
+						</div>
+					</div>
+					<div class="wutang clearfix">
+						<div class="wutang_l fl">
+							<span>无糖食品</span>
+						</div>
+						<ul class="wutang_r fl clearfix">
+							<li><a href="#">无糖饼干</a></li>
+							<li><a href="#">无糖冲饮</a></li>
+							<li><a href="#">无糖饮品</a></li>
+							<li><a href="#">无糖糖果</a></li>
+							<li><a href="#">其他无糖食品</a></li>
+						</ul>
+					</div>
+					<div class="sushi wutang clearfix">
+						<div class="wutang_l fl">
+							<span>方便速食</span>
+						</div>
+						<ul class="wutang_r fl clearfix">
+							<li><a href="#">罐装食品</a></li>
+							<li><a href="#">方便面/粉丝</a></li>
+							<li><a href="#">速食面</a></li>
+							<li><a href="#">素食汤</a></li>
+							<li><a href="#">其他素食</a></li>
+						</ul>
+					</div>
+					<div class="ganhuo wutang clearfix">
+						<div class="wutang_l fl">
+							<span>南北干货</span>
+						</div>
+						<ul class="wutang_r fl clearfix">
+							<li><a href="#">菌菇类</a></li>
+							<li><a href="#">黑木耳</a></li>
+							<li><a href="#">枸杞</a></li>
+							<li><a href="#">干菜</a></li>
+							<li><a href="#">枣子</a></li>
+							<li><a href="#">银耳/白木耳</a></li>
+							<li><a href="#">链子</a></li>
+						</ul>
+					</div>
+					<div class="shiyongyou wutang clearfix">
+						<div class="wutang_l fl">
+							<span>食用油</span>
+						</div>
+						<ul class="wutang_r fl clearfix">
+							<li><a href="#">葵花油</a></li>
+							<li><a href="#">花生油</a></li>
+							<li><a href="#">玉米油</a></li>
+							<li><a href="#">菜籽油</a></li>
+							<li><a href="#">调和油</a></li>
+							<li><a href="#">大豆油</a></li>
+							<li><a href="#">橄榄油</a></li>
+							<li><a href="#">其他食用油</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sequence clearfix">
+					<ul class="sequence_l fl clearfix">
+						<li><a href="javascript:void(0);">综合排序</a></li>
+						<li><a href="javascript:void(0);">销量</a><i></i></li>
+						<li class="jiage"><a href="javascript:void(0);">价格</a><i></i></li>
+						<li><a href="javascript:void(0);">评论</a><i></i></li>
+						<li><a href="javascript:void(0);">新品</a></li>
+					</ul>
+					<div class="sequence_c fl">
+						<input type="text" placeholder="最低价">
+						<span>-</span>
+						<input type="text" placeholder="最高价">
+					</div>
+					<div class="sequence_r fr">
+						<div class="currentPage fl">
+							<span class="currentPage_l">a</span> / 
+							<span class="currentPage_r">b</span>
+						</div>
+						<div class="page_No fr">
+							<a class="pagePrev" href="javascript:void(0);">&lt;</a>
+							<a class="pageNext" href="javascript:void(0);">&gt;</a>
+						</div>
+					</div>
+				</div>
+				<div class="list_goodslist"></div>
+				<div class="pageShow"></div>
+			</div>
+		</div>
+		<footer id="pageFooter"></footer>
+		<!-- sidebar开始 -->
+		<div class="sidebar">
+			<div class="sidebar_l">
+				<div class="buyCar">
+					<i></i>
+					<span>购<br>物<br>车</span>
+					<b class="num">0</b>
+				</div>
+				<div class="star">
+					<i></i>
+				</div>
+				<div class="history">
+					<i></i>
+				</div>
+				<div class="erweima">
+					<i></i>
+				</div>
+				<div class="kefu">
+					<i></i>
+				</div>
+				<div class="dingbu">
+					<i></i>
+				</div>
+			</div>
+			<!-- div class="sidebar_r fr">
+				<div class="tit">
+					购物车
+				</div>
+				<div class="goodsList">
+				</div>
+				<div class="account">
+					<div class="gongji">
+						共<span class="goodsNum">  </span>件商品，
+						总计：<span class="total_money"></span>
+					</div>
+					<!-- <button class="go_Car">查看购物车</button> -->
+					<a href="shoppingcar.html" class="go_Car"><span>查看购物车</span></a>
+				</div>
+			</div> -->
+		</div>
+		<!-- sidebar结束-->
+	</div>
+</body>
+</html>

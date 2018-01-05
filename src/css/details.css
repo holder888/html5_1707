@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/*详情页开始*/
+/*上面分类开始*/
+.goods_details .felei {
+  height: 76px;
+  border-bottom: 1px solid #ddd;
+}
+
+.goods_details .goods {
+  padding-top: 30px;
+}
+
+.goods_details .goods .goods_l {
+  width: 450px;
+  height: 526px;
+}
+
+.goods_details .goods .goods_l #etalage {
+  width: 405px;
+  height: 405px;
+  border: 1px solid #ddd;
+}
+
+.goods_details .goods .goods_r {
+  width: 710px;
+  height: 526px;
+}
+
+.goods_details .goods .goods_r h2 {
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.goods_details .goods .goods_r .price {
+  height: 70px;
+  background: #F9F9F9;
+  line-height: 70px;
+}
+
+.goods_details .goods .goods_r .price span:nth-child(1) {
+  font-size: 14px;
+}
+
+.goods_details .goods .goods_r .price .jiaqian {
+  color: #EC595C;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.goods_details .goods .goods_r .price .jiaqian::before {
+  content: "￥";
+}
+
+.goods_details .goods .goods_r .peisong {
+  height: 44px;
+  line-height: 44px;
+}
+
+.goods_details .goods .goods_r .peisong span:nth-child(1) {
+  font-size: 14px;
+}
+
+.goods_details .goods .goods_r .peisong #xiala {
+  width: 115px;
+  font-size: 14px;
+  margin: 0 20px 0 60px;
+}
+
+.goods_details .goods .goods_r .server {
+  height: 34px;
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.goods_details .goods .goods_r .server span {
+  margin-right: 65px;
+}
+
+.goods_details .goods .goods_r .zf_methods {
+  height: 80px;
+  font-size: 12px;
+  line-height: 70px;
+}
+
+.goods_details .goods .goods_r .zf_methods span {
+  margin-left: 92px;
+}
+
+.goods_details .goods .goods_r .buynum {
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.goods_details .goods .goods_r .buynum div {
+  margin: 0 10px 0 35px;
+}
+
+.goods_details .goods .goods_r .buynum div input {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #ddd;
+  margin-top: -3px;
+  text-align: center;
+}
+
+.goods_details .goods .goods_r .buynum div .numSub, .goods_details .goods .goods_r .buynum div .numAdd {
+  background: #ddd;
+  padding: 0 10px;
+}
+
+.goods_details .goods .goods_r .buynum div .numSub:hover, .goods_details .goods .goods_r .buynum div .numAdd:hover {
+  cursor: pointer;
+}
+
+.goods_details .goods .goods_r .buy {
+  height: 48px;
+  margin-top: 20px;
+  padding-left: 80px;
+}
+
+.goods_details .goods .goods_r .buy button {
+  padding: 0 46px;
+  line-height: 50px;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #EC595C;
+}
+
+.goods_details .goods .goods_r .buy .nowBuy {
+  background: #FFF8F9;
+  color: #EC595C;
+}
+
+.goods_details .goods .goods_r .buy .addCar {
+  background: #EC595C;
+}
+
+.goods_details .goods .goods_r .buy .nowBuy:hover {
+  background: #FFF;
+}
+
+.goods_details .goods .goods_r .buy .addCar:hover {
+  background: rgba(236, 89, 92, 0.8);
+}
+
+.goods_details .goods .goods_r .discuss {
+  line-height: 64px;
+  padding-left: 87px;
+  font-size: 14px;
+}
+
+.goods_details .goods .goods_r .discuss span:nth-child(2n) {
+  margin-right: 30px;
+}
+
+.goods_details .goods .goods_r .discuss a {
+  color: #00f;
+}
+
+.goods_details .fenxiang {
+  height: 48px;
+  line-height: 38px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.goods_details .fenxiang .bh {
+  margin-left: 250px;
+}
+
+.goods_details .goods_tuijian .goods_tuijian_top h3 {
+  line-height: 46px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.goods_details .goods_tuijian .goods_tuijian_top .yeshu {
+  color: #f00;
+}
+
+.goods_details .goods_tuijian .goods_list {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.goods_details .goods_tuijian .goods_list ul {
+  width: 2410px;
+  height: 300px;
+  position: absolute;
+  left: -1205px;
+  top: 0;
+}
+
+.goods_details .goods_tuijian .goods_list ul li {
+  float: left;
+  width: 225px;
+  height: 300px;
+  margin-right: 16px;
+  border: 1px solid #ddd;
+}
+
+.goods_details .goods_tuijian .goods_list ul li img {
+  width: 100%;
+}
+
+.goods_details .goods_tuijian .goods_list ul li h4 {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.goods_details .goods_tuijian .goods_list ul li .price {
+  color: #E52648;
+  margin-left: 20px;
+}
+
+.goods_details .goods_tuijian .goods_list ul li .price::before {
+  content: "￥";
+  color: #E52648;
+}
+
+.goods_details .goods_tuijian .goods_list ul li:last-child {
+  margin-right: 0;
+}
+
+.goods_details .goods_bottom {
+  margin-top: 40px;
+}
+
+.goods_details .goods_bottom .goods_bottom_l {
+  width: 210px;
+  border: 1px solid #ddd;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy h2 {
+  line-height: 40px;
+  background: #ddd;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul {
+  margin-top: 30px;
+  padding-left: 13px;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul li {
+  width: 184px;
+  height: 290px;
+  border-bottom: 1px solid #ddd;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul li img {
+  width: 100%;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul li h4 {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul li .price {
+  color: #E52648;
+  margin-top: 20px;
+}
+
+.goods_details .goods_bottom .goods_bottom_l .allBuy ul li .price::before {
+  content: "￥";
+  color: #E52648;
+}
+
+.goods_details .goods_bottom .goods_misoshu {
+  width: 955px;
+  border: 1px solid #ddd;
+}
+
+.goods_details .goods_bottom .goods_misoshu .product_data {
+  height: 56px;
+  background: #ddd;
+  font-size: 14px;
+}
+
+.goods_details .goods_bottom .goods_misoshu .product_data ul li {
+  float: left;
+  line-height: 56px;
+  padding: 0 46px;
+  border-right: 1px solid #ccc;
+}
+
+.goods_details .goods_bottom .goods_misoshu .product_data ul li:hover {
+  background: #fff;
+  color: #E52648;
+  cursor: pointer;
+}
+
+.goods_details .goods_bottom .goods_misoshu .product_data .phoneBy {
+  line-height: 56px;
+  padding-right: 30px;
+}
+
+.goods_details .goods_bottom .goods_misoshu .product_pic {
+  padding-left: 100px;
+}
+
+/*上面分类结束*/
+/*详情页结束*/

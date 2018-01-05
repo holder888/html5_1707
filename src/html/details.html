@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表页</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/details.css">
+	<link rel="stylesheet" href="../lib/zoom/css/normalize.css">
+	<link rel="stylesheet" href="../lib/zoom/css/style.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/details.js"></script>
+	<script src="../lib/zoom/js/jqzoom.js"></script>
+	<script>
+		jQuery(function($){
+			$('#pageHeader').load('common.html #header');
+			$('#pageFooter').load('common.html #links,#footer');
+		});
+	</script>
+</head>
+<body>
+	<div class="all">
+		<header id="pageHeader"></header>
+		<!-- main开始 -->
+		<div id="main">
+			<div class="container">
+				<div class="goods_details">
+					<div class="felei">
+						<a href="list.html">食品粮油 ></a>
+						<a href="list.html">休闲零食 ></a>
+						<a href="list.html">坚果炒货 ></a>
+						<a href="list.html">豆类（炒货）></a>
+						<a href="list.html">良品铺子 ></a>
+					</div>
+					<div class="goods clearfix">
+						<div class="goods_l fl">
+							<ul id="etalage">
+					        </ul>
+						</div>
+						<div class="goods_r fl">
+							<h2 class="goodsTitle"></h2>
+							<div class="price">
+								<span>销售价</span>
+								<span class="jiaqian"></span>
+							</div>
+							<div class="peisong">
+								<span>配送</span>
+								<select name="xiala" id="xiala">
+									<option value="广东省广州市">广东省广州市</option>
+									<option value="广东省广州市">湖北省武汉市</option>
+									<option value="广东省广州市">广西省钦州市</option>
+								</select>
+								<span>99元免基础费用（5kg内）</span>
+							</div>
+							<div class="server">
+								<span>服务</span>由百联联华提供发货和售后服务，预计01月05日到货
+							</div>
+							<div class="zf_methods">
+								<span>1.支持到店自提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.不支持7天无理由退货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.不支持货到付款</span>
+							</div>
+							<div class="buynum">
+								<span class="fl">购买数量</span>
+								<div class="fl clearfix">
+									<span class="numSub fl">-</span>
+									<input type="text fl" id="goods_Num">
+									<span class="numAdd fr">+</span>
+								</div>
+								库存<span class="kucun fl"> 20件</span>
+							</div>
+							<div class="buy">
+								<button class="nowBuy">立即购买</button>
+								<button class="addCar">加入购物车</button>
+								<span>收藏</span>
+							</div>
+							<div class="discuss">
+								<span class="good_discuss">100%</span><span> 好评</span>
+								<span class="discuss_num">2</span><span> 评价</span>
+								<a href="#">评价返积分</a>
+							</div>
+						</div>
+					</div>
+					<div class="fenxiang">
+						<a href="#">分享</a>
+						<span class="bh">商品编号:</span> <span class="bianhao"></span>
+					</div>
+					<div class="goods_tuijian">
+						<div class="goods_tuijian_top clearfix">
+							<h3 class="fl">购买此商品的顾客也会购买</h3>
+							<div class="page fr">
+								<a class="page_prev" href="javasrcipt:void(0);">&lt; </a>
+								<span class="yeshu">1</span>/2
+								<a class="page_next" href="javasrcipt:void(0);"> &gt; </a>
+							</div>
+						</div>
+						<div class="goods_list">
+						</div>
+					</div>
+					<div class="goods_bottom clearfix">
+						<div class="goods_bottom_l fl">
+							<div class="allBuy">
+								<h2>大家都在买</h2>
+							</div>
+							<div class="allSee allBuy">
+								<h2>看了又看</h2>
+							</div>
+						</div>
+						<div class="goods_misoshu fr">
+							<div class="product_data clearfix">
+								<ul class="fl clearfix">
+									<li>商品介绍</li>
+									<li>参数及包装</li>
+									<li>售后服务</li>
+									<li>评价详情<span>n</span></li>
+								</ul>
+								<div class="phoneBy fr">
+									<span>手机购买</span>
+								</div>
+							</div>
+							<div class="product_pic">
+								<img src="../img/pic1.jpeg">
+								<img src="../img/pic2.jpg">
+								<img src="../img/pic3.jpeg">
+								<img src="../img/pic4.jpeg">
+								<img src="../img/pic5.jpeg">
+								<img src="../img/pic6.jpeg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main结束 -->
+		<footer id="pageFooter"></footer>
+		<!-- sidebar开始 -->
+		<div class="sidebar clearfix">
+			<div class="sidebar_l fl">
+				<div class="buyCar">
+					<i></i>
+					<span>购<br>物<br>车</span>
+					<b class="num">0</b>
+				</div>
+				<div class="star">
+					<i></i>
+				</div>
+				<div class="history">
+					<i></i>
+				</div>
+				<div class="erweima">
+					<i></i>
+				</div>
+				<div class="kefu">
+					<i></i>
+				</div>
+				<div class="dingbu">
+					<i></i>
+				</div>
+			</div>
+			<div class="sidebar_r fr">
+				<div class="tit">
+					购物车
+				</div>
+				<div class="goodsList">
+					<ul class="cUl"></ul>
+				</div>
+				<div class="account">
+					<div class="gongji">
+						共<span class="goodsNum">  </span>件商品，
+						总计：<span class="total_money"></span>
+					</div>
+					<!-- <button class="go_Car">查看购物车</button> -->
+					<a href="shoppingcar.html" class="go_Car"><span>查看购物车</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- sidebar结束-->
+	</div>
+</body>
+</html>

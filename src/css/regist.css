@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*注册页面开始*/
+#main .regist {
+  border: 1px solid #ddd;
+}
+
+#main .regist .regist_top {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+#main .regist .regist_top h2 {
+  color: #f00;
+}
+
+#main .regist .regist_top .regist_top_r {
+  font-size: 14px;
+}
+
+#main .regist .regist_top .regist_top_r a {
+  color: #00f;
+}
+
+#main .regist .regist_bottom {
+  height: 584px;
+}
+
+#main .regist .regist_bottom .formgrop {
+  width: 585px;
+  margin: 20px auto;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info {
+  margin-top: 20px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .name {
+  width: 120px;
+  text-align: right;
+  line-height: 34px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .name i {
+  color: #f00;
+  margin-right: 5px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .username div {
+  width: 300px;
+  height: 34px;
+  border: 1px solid #ddd;
+  line-height: 34px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .username div input {
+  width: 100%;
+  height: 26px;
+  padding-left: 30px;
+  background: #fff url(../css/img/register.png) no-repeat 6px 4px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .hint {
+  height: 34px;
+  margin-left: 5px;
+  position: relative;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .hint li {
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+  line-height: 34px;
+  width: 116px;
+  height: 34px;
+  display: none;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .hint li i {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .hint li span {
+  width: 100px;
+  position: absolute;
+  left: 20px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .yz {
+  width: 198px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .yz > div {
+  width: 198px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .yzm {
+  margin-left: 20px;
+  line-height: 34px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .yzm .code, #main .regist .regist_bottom .formgrop .regist_info .yzm .getCode {
+  padding: 5px 10px;
+  background: #ccc;
+  margin-right: 20px;
+}
+
+#main .regist .regist_bottom .formgrop .regist_info .yzm .cuowu {
+  font-size: 12px;
+  color: #f00;
+  margin-left: 10px;
+  line-height: 30px;
+}
+
+#main .regist .regist_bottom .formgrop .agree {
+  width: 320px;
+  height: 30px;
+  padding-top: 20px;
+  margin-left: 120px;
+  font-size: 14px;
+}
+
+#main .regist .regist_bottom .formgrop .btnRegist {
+  margin: 30px 0 0 120px;
+}
+
+#main .regist .regist_bottom .formgrop .btnRegist button {
+  width: 300px;
+  height: 34px;
+  background: #E52648;
+  font-size: 18px;
+  color: #fff;
+}
+
+/*注册页面结束*/

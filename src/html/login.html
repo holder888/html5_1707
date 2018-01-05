@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆页</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/login.js"></script>
+	<script>
+		jQuery(function($){
+			$('#pageHeader').load('common.html #header');
+			$('#pageFooter').load('common.html #links,#footer');
+		});
+	</script>
+</head>
+<body>
+	<div class="all">
+		<header id="pageHeader"></header>
+		<div id="main">
+			<div class="container">
+				<div class="login_box">
+					<div class="formgroup">
+						<div class="formgroup_t">
+							<h2 class="fl">会员登录</h2>
+							<a class="fr" href="regist.html">注册新账号</a>
+						</div>
+						<div class="formgroup_c">
+							<div class="form_grooup">
+								<input type="text" name="username" id="username" autocomplete="off" placeholder="用户名/手机号/邮箱">
+							</div>
+							<div class="form_grooup">
+								<input type="password" name="password" id="password" placeholder="密码">
+							</div>
+							<div class="forget">
+								<span class="tishi"></span><a href="#">忘记密码?</a>
+							</div>
+							<button id="btnLogin">登录</button>
+						</div>
+						<div class="formgroup_b">
+							<div class="other">
+								<div class="txt">其他帐号联合登录</div>
+								<div class="logo">
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="pageFooter"></footer>
+	</div>
+</body>
+</html>

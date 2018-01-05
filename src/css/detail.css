@@ -1,0 +1,252 @@
+@charset "UTF-8";
+.all {
+  min-width: 1200px;
+  _width: expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?"1200px":"");
+}
+
+/*main开始*/
+#main .search {
+  height: 55px;
+  padding: 0 10px;
+  line-height: 55px;
+  border-bottom: 2px solid #444;
+}
+
+#main .search .search_c {
+  width: 160px;
+  height: 24px;
+  border: 1px solid #ddd;
+  margin: 17px 0 0 20px;
+}
+
+#main .search .search_c input {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 0 30px 0 10px;
+  background: url(../css/img/fdj.png) no-repeat right center;
+}
+
+#main .fenlei .pinpai {
+  min-height: 130px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+#main .fenlei .pinpai .pinpai_l {
+  width: 130px;
+  min-height: 130px;
+  background: #eee;
+  position: relative;
+}
+
+#main .fenlei .pinpai .pinpai_l span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#main .fenlei .pinpai .pinpai_c {
+  width: 950px;
+  height: 130px;
+}
+
+#main .fenlei .pinpai .pinpai_c li {
+  float: left;
+  padding: 8px 0 0 5px;
+}
+
+#main .fenlei .pinpai .pinpai_c li a {
+  display: inline-block;
+  width: 108px;
+  height: 48px;
+  border: 1px solid #ddd;
+  margin: 2px;
+}
+
+#main .fenlei .pinpai .pinpai_c li a img {
+  width: 100%;
+  height: 100%;
+}
+
+#main .fenlei .pinpai .pinpai_r {
+  padding-top: 10px;
+  min-height: 130px;
+  font-size: 14px;
+}
+
+#main .fenlei .pinpai .pinpai_r .open {
+  padding: 0 20px 0 10px;
+  background: url(../css/img/arror_bottom.png) no-repeat right 9px;
+}
+
+#main .fenlei .wutang {
+  border-bottom: 1px solid #ddd;
+}
+
+#main .fenlei .wutang .wutang_l {
+  width: 130px;
+  height: 30px;
+  background: #eee;
+  position: relative;
+}
+
+#main .fenlei .wutang .wutang_l span {
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  line-height: 30px;
+}
+
+#main .fenlei .wutang .wutang_r {
+  width: 1060px;
+  height: 30px;
+}
+
+#main .fenlei .wutang .wutang_r li {
+  float: left;
+  line-height: 30px;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+#main .sequence {
+  margin-top: 20px;
+  background: #eee;
+}
+
+#main .sequence .sequence_l {
+  width: 340px;
+  height: 36px;
+}
+
+#main .sequence .sequence_l li {
+  float: left;
+  position: relative;
+}
+
+#main .sequence .sequence_l li a {
+  display: inline-block;
+  line-height: 36px;
+  padding: 0 20px 0 15px;
+  font-size: 12px;
+  background: #eee;
+  border: 1px solid #bbb;
+}
+
+#main .sequence .sequence_l li:nth-child(2) i, #main .sequence .sequence_l li:nth-child(4) i {
+  display: block;
+  width: 7px;
+  height: 34px;
+  background: url(../css/img/sequence_1.png) no-repeat;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+}
+
+#main .sequence .sequence_l li:nth-child(3) i {
+  display: block;
+  width: 7px;
+  height: 34px;
+  background: url(../css/img/sequence_2.png) no-repeat;
+  position: absolute;
+  right: 8px;
+  top: 14px;
+}
+
+#main .sequence .sequence_c {
+  width: 165px;
+  height: 38px;
+  padding: 3px 4px;
+  border: 1px solid #bbb;
+  font-size: 12px;
+}
+
+#main .sequence .sequence_c input {
+  width: 69px;
+  height: 30px;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+}
+
+#main .sequence .sequence_r {
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #bbb;
+  padding: 0 15px;
+}
+
+#main .sequence .sequence_r .currentPage {
+  margin-right: 20px;
+}
+
+#main .sequence .sequence_r .pageNo a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #ddd;
+  text-align: center;
+  border: 1px solid #bbb;
+}
+
+#main .details_goodslist {
+  margin-top: 20px;
+}
+
+#main .details_goodslist ul {
+  overflow: hidden;
+}
+
+#main .details_goodslist ul li {
+  float: left;
+  width: 228px;
+  height: 388px;
+  border: 1px solid #ddd;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  padding: 10px;
+  position: relative;
+}
+
+#main .details_goodslist ul li .price {
+  color: #E52648;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#main .details_goodslist ul li .price::before {
+  content: "￥";
+}
+
+#main .details_goodslist ul li h3 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#main .details_goodslist ul li button {
+  width: 200px;
+  height: 34px;
+  background: #fff;
+  line-height: 34px;
+  font-size: 18px;
+  color: #E52648;
+  border: 1px solid #E52648;
+  position: absolute;
+  bottom: 20px;
+}
+
+#main .details_goodslist ul li button:hover {
+  background: #E52648;
+  color: #fff;
+}
+
+#main .details_goodslist ul li:nth-child(5n+5) {
+  margin-right: 0;
+}
+
+#main .details_goodslist ul li:hover {
+  border: 1px solid #E52648;
+}
+
+/*main结束*/

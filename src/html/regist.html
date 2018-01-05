@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/regist.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/regist.js"></script>
+	<script>
+		jQuery(function($){
+			$('#pageHeader').load('common.html #header');
+			$('#pageFooter').load('common.html #links,#footer');
+		});
+	</script>
+</head>
+<body>
+	<div class="all">
+		<header id="pageHeader"></header>
+		<div id="main">
+			<div class="container">
+				<div class="regist">
+					<div class="regist_top clearfix">
+						<h2 class="fl">您好，感谢您加入百联</h2>
+						<div class="regist_top_r fr">
+							<span>如有帐号，请点击</span>
+							<a href="login.html">登录</a>
+						</div>
+					</div>
+					<div class="regist_bottom">
+						<div class="formgrop">
+							<div class="regist_info clearfix">
+								<div class="name fl"><i>*</i>用户名：</div>
+								<div class="username fl">
+									<div>
+										<input type="text" name="username" autocomplete="off" id="username" placeholder="6-20位字符，支持字母或字母与数字结合">
+									</div>
+								</div>
+								<ul class="yhm hint fl clearfix">
+									<li><i><img src="../css/img/arror_x.png"></i><span>请输入用户名</span></li>
+									<li><i><img src="../css/img/arror_i.png"></i><span></span></li>
+									<li><i><img src="../css/img/arror_gou.png"></i><span></span></li>
+								</ul>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl"><i>*</i>密码：</div>
+								<div class="password username fl">
+									<div>
+										<input type="password" name="password" id="password" placeholder="8-20位字符，至少使用两种字符组合">
+									</div>
+								</div>
+								<ul class="mm hint fl clearfix">
+									<li><i><img src="../css/img/arror_x.png"></i><span>请输入登录密码</span></li>
+									<li><i><img src="../css/img/arror_i.png"></i>
+									<span class="强度"></span></li>
+									<li><i><img src="../css/img/arror_gou.png"></i><span></span></li>
+								</ul>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl"><i>*</i>确认密码：</div>
+								<div class="confirmPassword username fl">
+									<div>
+										<input type="password" name="confirmPassword" id="confirmPassword" placeholder="请再次输入密码">
+									</div>
+								</div>
+								<ul class="qrmm hint fl clearfix">
+									<li><i><img src="../css/img/arror_x.png"></i><span>请输入确认密码</span></li>
+									<li><i><img src="../css/img/arror_i.png"></i><span>请输入确认密码</span></li>
+									<li><i><img src="../css/img/arror_gou.png"></i><span></span></li>
+								</ul>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl"><i>*</i>手机号：</div>
+								<div class="phoneNo username fl">
+									<div>
+										<input type="text" name="phoneNumber" id="phoneNumber" placeholder="请输入11位手机号">
+									</div>
+								</div>
+								<ul class="sjh hint fl clearfix">
+									<li><i><img src="../css/img/arror_x.png"></i><span>请输入手机号</span></li>
+									<li><i><img src="../css/img/arror_i.png"></i><span>请输入手机号</span></li>
+									<li><i><img src="../css/img/arror_gou.png"></i><span></span></li>
+								</ul>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl">验证码：</div>
+								<div class="yz username fl ">
+									<div>
+										<input type="text" name="yzNumber" id="yzNumber" placeholder="请输入验证码">
+									</div>
+								</div>
+								<div class="yzm fl">
+									<span class="code"></span><span class="change">换一个</span><span class="cuowu"></span>
+								</div>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl"><i>*</i>短信验证码：</div>
+								<div class="xdNo yz username fl ">
+									<div>
+										<input type="text" name="dxNumber" id="dxNumber" placeholder="请输入短信验证码">
+									</div>
+								</div>
+								<div class="yzm fl">
+									<span class="getCode">获取验证码</span>
+								</div>
+							</div>
+							<div class="regist_info clearfix">
+								<div class="name fl">电子邮箱：</div>
+								<div class="emailNo username fl">
+									<div>
+										<input type="text" name="emailNumber" id="emailNumber" placeholder="请输入有效邮箱">
+									</div>
+								</div>
+							</div>
+							<div class="agree">
+								<input type="checkbox" name="xuanze" id="xuanze">
+								<span>我已阅读并同意</span>
+								<a href="javascript:void(0);">《百联通会员注册协议》</a>
+							</div>
+							<div class="btnRegist">
+								<button>立即注册 完成绑定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="pageFooter"></footer>
+	</div>
+</body>
+</html>

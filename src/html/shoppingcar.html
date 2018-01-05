@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/shoppingcar.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script>
+		jQuery(function($){
+			$('#pageHeader').load('common.html #header');
+			$('#pageFooter').load('common.html #links,#footer');
+		});
+	</script>
+</head>
+<body>
+	<div class="all">
+		<header id="pageHeader"></header>
+		<div id="cart">
+			<div class="container">
+				<h2>购物车</h2>
+				<div class="cart_title">
+					<h3>全部商品 </h3><span>nn</span>
+				</div>
+				<div class="cart_head clearfix">
+					<div class="allCheck fl">
+						<input type="checkbox" name="check_box" id="check_box1">
+						<span>全选</span>
+					</div>
+					<div class="xinxi fl">商品信息</div>
+					<div class="danjia fl">单价（元）</div>
+					<div class="jianshu fl">件数</div>
+					<div class="jine fl">金额（元）</div>
+					<div class="cuozuo fl">操作</div>
+				</div>
+				<div class="cart_list">
+					
+				</div>
+				<div class="cart_pay clearfix">
+					<div class="allck fl">
+						<input type="checkbox" name="check_box" id="check_box2">
+						<span>全选</span>
+					</div>
+					<span class="delete_goods">删除</span>
+					<a href="javascript:(void);">已选择 <span>nn</span> 件商品</a>
+					<div class="pay fr">
+						商品金额：<span>nnn</span>
+						<button class="account">去结算</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="pageFooter"></footer>
+	</div>
+</body>
+</html>
