@@ -27,6 +27,9 @@
   left: 95px;
   top: 2px;
   line-height: 50px;
+  color: #E52648;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #cart .cart_head {
@@ -39,7 +42,7 @@
   padding-right: 100px;
 }
 
-#cart .cart_head .allCheck #check_box1 {
+#cart .cart_head .allCheck {
   line-height: 52px;
 }
 
@@ -48,8 +51,80 @@
 }
 
 #cart .cart_list {
-  min-height: 100px;
+  min-height: 200px;
   border-bottom: 1px solid #ddd;
+}
+
+#cart .cart_list ul {
+  padding: 10px 0;
+}
+
+#cart .cart_list ul li {
+  height: 108px;
+  padding: 4px 0;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+}
+
+#cart .cart_list ul li .checked {
+  margin: 40px 10px 0 0;
+}
+
+#cart .cart_list ul li img {
+  height: 100px;
+  margin-right: 10px;
+  border: 1px solid #eee;
+}
+
+#cart .cart_list ul li h4 {
+  width: 380px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+#cart .cart_list ul li .price {
+  width: 160px;
+  text-align: center;
+  line-height: 100px;
+}
+
+#cart .cart_list ul li .price::before {
+  content: "￥";
+}
+
+#cart .cart_list ul li .shuliang {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 60px;
+}
+
+#cart .cart_list ul li .shuliang input {
+  width: 40px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#cart .cart_list ul li .sum {
+  width: 120px;
+  line-height: 100px;
+  padding-left: 10px;
+  margin-right: 75px;
+  color: #E52648;
+}
+
+#cart .cart_list ul li .sum::before {
+  content: "￥";
+}
+
+#cart .cart_list ul li .dlt {
+  line-height: 100px;
+  padding: 3px 10px;
+}
+
+#cart .cart_list ul li .dlt:hover {
+  background: #E52648;
 }
 
 #cart .cart_pay {
@@ -65,6 +140,16 @@
 
 #cart .cart_pay .delete_goods {
   padding-right: 350px;
+}
+
+#cart .cart_pay .yixuan {
+  color: #E52648;
+}
+
+#cart .cart_pay .pay .totalAll {
+  color: #E52648;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #cart .cart_pay button {

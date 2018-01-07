@@ -114,7 +114,8 @@
 		var qty = 20;
 
 		$.ajax({
-			url:'../api/list_goods.php',
+			// url:'../api/list_goods.php',
+			url:'../api/mysql/liebiao_page.php',
 			data:{
 				'pageNo':pageNo,
 				'qty':qty
@@ -250,7 +251,8 @@
 
 			pageNo = target.innerText*1;
 			$.ajax({
-				url:'../api/list_goods.php',
+				// url:'../api/list_goods.php',
+				url:'../api/mysql/liebiao_page.php',
 				data:{
 					'pageNo':pageNo,
 					'qty':qty
@@ -272,7 +274,8 @@
 			gaoliang();
 
 			$.ajax({
-				url:'../api/list_goods.php',
+				// url:'../api/list_goods.php',
+				url:'../api/mysql/liebiao_page.php',
 				data:{
 					'pageNo':pageNo,
 					'qty':qty
@@ -292,7 +295,8 @@
 
 		$page_No.on('click','.pageNext',function(){
 			$.ajax({
-				url:'../api/list_goods.php',
+				// url:'../api/list_goods.php',
+				url:'../api/mysql/liebiao_page.php',
 				data:{
 					'pageNo':pageNo,
 					'qty':qty
@@ -334,7 +338,7 @@
 				return `<li>
 					<a href="#"><img src="${item.imgurl}" title="${item.id}"></a>
 					<div class="price">${item.price}</div>
-					<h3>${item.title}</h3>
+					<h3>${item.name}</h3>
 					<button>加入购物车</button>
 				</li>`
 			}).join(''));

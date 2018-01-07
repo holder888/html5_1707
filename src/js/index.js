@@ -83,7 +83,7 @@ jQuery(function($){
 			var $ul = $('<ul/>');
 			$ul.html($.map(res.data,function(item){
 				return `<li>
-					<a href="#"><img src="${item.imgurl}" title="${item.id}"></a>
+					<a href="html/list.html"><img src="${item.imgurl}" title="${item.id}"></a>
 					<h4>${item.title}</h4>
 					<div class="price">${item.price}</div>
 				</li>`
@@ -280,4 +280,21 @@ jQuery(function($){
 		 $('body,html').animate({ scrollTop: 0 }, 800);
 	})
 	//----------sidebar结束-----------
+
+	//首页下面的商品列表
+	$.ajax({
+		url:'api/mysql/shouye.php',
+		success:function(data){
+			var result = JSON.parse(data);//console.log(result)
+
+			var $goodslist = $('.goodslist');
+			$goodslist.html($.map(result,function(item){
+				return `<li>
+					<a href="html/list.html"><img src="${item.imgurl}" title="${item.id}"></a>
+					<h4>${item.name}</h4>
+					<div class="price">${item.price}</div>
+				</li>`
+			}).join(''));
+		}
+	});
 });

@@ -5,18 +5,38 @@
 	.cart_title{
 		position:relative;border-bottom:1px solid #ddd;
 		h3{width:85px;font-size:20px;line-height:50px;border-bottom:2px solid #E52648;}
-		span{position:absolute;left:95px;top:2px;line-height:50px;}
+		span{position:absolute;left:95px;top:2px;line-height:50px;color:#E52648;font-size:20px;font-weight:bold;}
 	}
 	.cart_head{
 		height:52px;border-bottom:1px solid #ddd;
 		div{line-height:52px;padding-right:100px;}
 		.allCheck{
-			#check_box1{line-height:52px;}
+			line-height:52px;
 		}
 		.xinxi{padding-right:350px;}
 	}
 	.cart_list{
-		min-height:100px;border-bottom:1px solid #ddd;
+		min-height:200px;border-bottom:1px solid #ddd;
+		ul{
+			padding:10px 0;
+			li{
+				height:108px;padding:4px 0;border-top:1px dashed #ddd;border-bottom:1px dashed #ddd;
+				.checked{margin:40px 10px 0 0;}
+				img{height:100px;margin-right:10px;border:1px solid #eee;}
+				h4{width:380px;margin-top:10px;line-height:30px;}
+				.price{width:160px;text-align:center;line-height:100px;}
+				.price::before{content:"￥";}
+				.shuliang{
+					width:200px;height:100px;line-height:100px;padding-left:60px;
+					input{width:40px;line-height:30px;border:1px solid #ddd;text-align:center;}
+
+				}
+				.sum{width:120px;line-height:100px;padding-left:10px;margin-right:75px;color:#E52648;}
+				.sum::before{content:"￥";}
+				.dlt{line-height:100px;padding:3px 10px;}
+				.dlt:hover{background:#E52648;}
+			}
+		}
 	}
 	.cart_pay{
 		line-height:50px;border-bottom:1px solid #ddd;
@@ -25,6 +45,10 @@
 		}
 		.delete_goods{
 			padding-right:350px;
+		}
+		.yixuan{color:#E52648;}
+		.pay{
+			.totalAll{color:#E52648;font-size:18px;font-weight:bold;}
 		}
 		button{
 			width:100px;margin-left:20px;line-height:54px;background:#E52648;

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/shoppingcar.css">
 	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/shoppingcar.js"></script>
 	<script>
 		jQuery(function($){
 			$('#pageHeader').load('common.html #header');
@@ -21,11 +22,11 @@
 			<div class="container">
 				<h2>购物车</h2>
 				<div class="cart_title">
-					<h3>全部商品 </h3><span>nn</span>
+					<h3>全部商品 </h3><span class="allGoods"></span>
 				</div>
 				<div class="cart_head clearfix">
 					<div class="allCheck fl">
-						<input type="checkbox" name="check_box" id="check_box1">
+						<input type="checkbox" name="checkAll1" class="checkAll1">
 						<span>全选</span>
 					</div>
 					<div class="xinxi fl">商品信息</div>
@@ -35,17 +36,16 @@
 					<div class="cuozuo fl">操作</div>
 				</div>
 				<div class="cart_list">
-					
 				</div>
 				<div class="cart_pay clearfix">
 					<div class="allck fl">
-						<input type="checkbox" name="check_box" id="check_box2">
+						<input type="checkbox" name="checkAll2" class="checkAll2">
 						<span>全选</span>
 					</div>
 					<span class="delete_goods">删除</span>
-					<a href="javascript:(void);">已选择 <span>nn</span> 件商品</a>
+					<a href="javascript:(void);">已选择 <span class="yixuan"></span> 件商品</a>
 					<div class="pay fr">
-						商品金额：<span>nnn</span>
+						商品金额：<span class="totalAll">nnn</span>
 						<button class="account">去结算</button>
 					</div>
 				</div>

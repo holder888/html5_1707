@@ -8,7 +8,8 @@
 
 		var $goods = $('.goods');//console.log($goods)
 		$.ajax({
-			url:'../api/details.php',
+			// url:'../api/details.php',
+			url:'../api/mysql/xiangqing.php',
 			data:{'id':id},
 			success:function(data){
 				var res = JSON.parse(data);//console.log(res)
@@ -48,7 +49,7 @@
 				//根据返回数据填写头部商品信息
 				//标题
 				var $goodsTitle = $('.goodsTitle');
-				$goodsTitle.text(res.title);
+				$goodsTitle.text(res.name);
 
 				//价格
 				var $jiaqian = $('.jiaqian');
@@ -79,6 +80,64 @@
 						return;
 					}
 				})
+
+
+				
+
+				//---------点击立即购买按钮------------
+				console.log(res);
+				// 用于保存购物车中的商品信息
+				var carlist = [];
+				var cookies = document.cookie;
+				if(cookies.length){
+					cookies = cookies.split('; ');
+					cookies.forEach(function(item){
+						var arr = item.split('=');
+						if(arr[0] === 'carlist'){
+							carlist = JSON.parse(arr[1]);
+						}
+					});
+				}
+				var nowBuy = $('.nowBuy')[0];
+				nowBuy.onclick = function(){
+					// console.log(goods_Num.val());
+					createCookie();
+				}
+
+
+				//封装详情页cookie的写入
+				function createCookie(){
+					var guid = res.id;
+
+					//判断carlist中是否存在相同商品
+					//判断循环是否跑完
+					for(var i=0;i<carlist.length;i++){
+						if(carlist[i].guid === guid){
+							break;
+						}
+					}
+
+					if(i===carlist.length){
+						//不存在：创建对象，并且数量为1
+						var goods = {
+							guid:guid,
+							imgurl:res.imgurl,
+							name:res.name,
+							price:res.price,
+							qty:goods_Num.val()*1
+						}
+						carlist.push(goods);
+					}else{
+						//存在：则加数量
+						carlist[i].qty += (goods_Num.val())*1;//这里一直是字符串拼接 待解决
+					}
+					// 写入cookie
+					var now = new Date();
+					now.setDate(now.getDate()+365);
+					document.cookie = 'carlist=' + JSON.stringify(carlist) + ';expires=' + now.toUTCString();
+					window.open("shoppingcar.html");
+					// location.reload();
+				}
 
 
 				
@@ -123,28 +182,44 @@
 	                	$('.goodsNum')[0].innerText++;
 
 
-	                	//cookie
-	                	console.log(res)
-	                	var $id = res.id;
-	                	var $title = res.title;
-	                	var $imgurl = res.imgurl;
-	                	var $price = res.price;
-	                	// console.log($id,$title,$imgurl,$price)
-	                	document.cookie = 'id=' + $id;
-	                	document.cookie = 'title=' + $title;
-	                	document.cookie = 'imgurl=' + $imgurl;
-	                	document.cookie = 'price=' + $price;
+
+	                	//-----------右侧sidebar购物车里面生成商品------------
+	               		//createCookie();
+	                	//var $cUl = $('.cUl');
+	              		// 读取cookie
+						// var carlist;//undefined
+
+						// var cookies = document.cookie;
+						// if(cookies.length){
+						// 	cookies = cookies.split('; ');//['carlist=[{},{}]','username=xxx']
+						// 	cookies.forEach(function(item){
+						// 		var arr = item.split('=');
+						// 		if(arr[0] === 'carlist'){
+						// 			carlist = JSON.parse(arr[1]);
+						// 		}
+						// 	});
+						// }
+
+						// console.log(carlist);
+						// $cUl.html($.map(carlist,function(item){
+						// 	return `<li>
+						// 		<a href="#"><img src="${item.imgurl}" title="${item.id}"></a>
+						// 		<h4>${item.name}</h4>
+						// 		<div class="price">${item.price}</div>
+						// 		<div class="goodsNumber">数量: <span class="number">1</span></div>
+						// 		<span class="btnDelete">&times;</span>
+						// 	</li>`
+						// }).join(''));
+
+
+
 	                	
-	                	var cookies = document.cookie;
-	                	console.log(cookies);
-
-
-	                	//右侧sidebar购物车里面生成商品
+	                	//-----------右侧sidebar购物车里面生成商品------------
 	                	var $cUl = $('.cUl');
 	                	if(qTy == 0){qTy++;
 	                		var $li = $('<li/>');
 		                	$li.html(`<a href="#"><img src="${res.imgurl}" title="${res.id}"></a>
-									<h4>${res.title}</h4>
+									<h4>${res.name}</h4>
 									<div class="price">${res.price}</div>
 									<div class="goodsNumber">数量: <span class="number">1</span></div>
 									<span class="btnDelete">&times;</span>`
@@ -154,6 +229,7 @@
 	                		$('.number')[0].innerText++;//sidebar中生成的结构中的商品数量
 	                	}
 	                	
+	                	console.log()
 
 						//计算总价
 						$total_money = $('.total_money');
@@ -170,6 +246,7 @@
 							$total_money.text('');
 							qTy = 0;//要重置qTy等于0，不然删除商品后就无法再生成结构了
 						})
+
 
 	                });
 				})
