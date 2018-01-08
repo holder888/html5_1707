@@ -52,7 +52,8 @@
 						// now.setDate(now.getDate() + 10);
 						// document.cookie = 'usesrname=' + _username + ';expires=' + now.toUTCString();
 						setTimeout(()=>{
-							location.href = 'http://localhost:2018/index.html';
+							// location.href = 'http://localhost:2018/index.html';
+							location.href = '../index.html';
 						},3000);
 						$('.login').text(_username);
 					}
