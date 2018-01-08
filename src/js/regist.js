@@ -11,12 +11,14 @@
 		var yzNumber = document.querySelector('#yzNumber');
 		var dxNumber = document.querySelector('#dxNumber');
 		var emailNumber = document.querySelector('#emailNumber');
+		var xuanze = document.querySelector('#xuanze');
 
 		var yhm = document.querySelector('.yhm');
 		var mm = document.querySelector('.mm');
 		var qrmm = document.querySelector('.qrmm');
 		var sjh = document.querySelector('.sjh');
 
+		//分别判断获得焦点和失去焦点的状态
 		//用户名
 		username.onfocus = ()=>{
 			yhm.children[1].style.display = 'block';
@@ -127,11 +129,11 @@
 				cuowu.innerHTML = '验证码不能为空';
 				return;
 			}
-			if(yzNumber.value != code.innerHTML){
+			else if(yzNumber.value != code.innerHTML){
 				cuowu.innerHTML = '验证码错误';
 				return;
 			}else{
-				cuowu.innerHTML = '验证码正确';
+				cuowu.innerHTML = '';
 			}
 		}
 
@@ -145,7 +147,13 @@
 			}
 		}
 
+		//非空验证
 		btnRegist.onclick = ()=>{
+			var _username = username.value;
+			var _password = password.value;
+			var _phoneNumber = phoneNumber.value;
+			var _emailNumber = emailNumber.value;
+
 			if(username.value.trim() == ''){
 				yhm.children[0].style.display = 'block';
 				return;
@@ -155,15 +163,52 @@
 			}else if(confirmPassword.value.trim() == ''){
 				qrmm.children[0].style.display = 'block';
 				return;
+			}else if(confirmPassword.value != password.value){
+				return;
 			}else if(phoneNumber.value.trim() == ''){
 				sjh.children[0].style.display = 'block';
 				return;
-			}else if(emailNumber.value.trim() == ''){
+			}
+			
+			if(yzNumber.value.trim() == ''){
+				cuowu.innerHTML = '验证码不能为空';
 				return;
 			}
+			if(yzNumber.value != code.innerHTML){
+				cuowu.innerHTML = '验证码错误';
+				return;
+			}
+			// if(emailNumber.value.trim() == ''){
+			// 	return;
+			// }
+			if(!/^[a-z][\w\-\.]{5,17}@[a-z0-9\-]{2,}(\.[a-z]{2,}){1,2}$/.test(emailNumber.value)){
+				return;
+			}
+			if(!xuanze.checked){
+				return;
+			};
+
+			$.ajax({
+				url:'../api/mysql/zhuce.php',
+				data:{
+					username:_username,
+					password:_password,
+					phone:_phoneNumber,
+					email:_emailNumber
+				},
+				success:function(data){
+					if(data == 'fail'){
+						$('.result').text('用户名已经存在');
+						return;
+					}
+					$('.result').text('注册成功,马上去登陆');
+					setTimeout(()=>{
+						location.href = 'login.html';
+					},2000);
+				}
+			})
+			
 		}
-
 		//----注册部分结束----------
-
 	});
 }();

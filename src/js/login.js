@@ -12,29 +12,52 @@
 			var tishi = document.querySelector('.tishi');
 
 			//发起ajax请求
-			var xhr_login = new XMLHttpRequest();
+			// var xhr_login = new XMLHttpRequest();
 
-			var status = [200,304];
+			// var status = [200,304];
 
-			xhr_login.onload = ()=>{
-				if(status.includes(xhr_login.status)){
-					// console.log(xhr_login.responseText);
-					if(xhr_login.responseText == 'no'){
+			// xhr_login.onload = ()=>{
+			// 	if(status.includes(xhr_login.status)){
+			// 		// console.log(xhr_login.responseText);
+			// 		if(xhr_login.responseText == 'no'){
+			// 			tishi.innerHTML = '用户名或密码错误'
+			// 			return;
+			// 		}
+			// 		else if(xhr_login.responseText == 'yes'){
+			// 			tishi.innerHTML = '恭喜您登录成功,3s后跳转到首页'
+			// 			setTimeout(()=>{
+			// 				location.href = 'http://localhost:2018/index.html';
+			// 			},3000);
+			// 		}
+			// 	}
+			// }
+
+			// xhr_login.open('get','../api/login.php?username='+_username+'&password='+_password,true);
+
+			// xhr_login.send();
+
+			$.ajax({
+				url:'../api/mysql/denglu.php',
+				data:{
+					username:_username,
+					password:_password
+				},
+				success:function(data){
+					if(data == 'fail'){
 						tishi.innerHTML = '用户名或密码错误'
-						return;
 					}
-					else if(xhr_login.responseText == 'yes'){
-						tishi.innerHTML = '恭喜您登录成功,3s后跳转到首页'
+					else if(data == 'ok'){
+						tishi.innerHTML = '恭喜您登录成功,3s后跳转到首页';
+						// var now = new Date();
+						// now.setDate(now.getDate() + 10);
+						// document.cookie = 'usesrname=' + _username + ';expires=' + now.toUTCString();
 						setTimeout(()=>{
 							location.href = 'http://localhost:2018/index.html';
 						},3000);
+						$('.login').text(_username);
 					}
 				}
-			}
-
-			xhr_login.open('get','../api/login.php?username='+_username+'&password='+_password,true);
-
-			xhr_login.send();
+			})
 		}
 	});
 }();

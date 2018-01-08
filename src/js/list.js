@@ -10,10 +10,12 @@
 			if(zhankai){
 				$pinpai.animate({height:310},600);
 				$pinpai_l.animate({height:310},600);
+				$open.text('收起');
 				zhankai = false;
 			}else{
 				$pinpai.animate({height:130},600);
 				$pinpai_l.animate({height:130},600);
+				$open.text('展开');
 				zhankai = true;
 			}
 		})
@@ -127,26 +129,20 @@
 				createHtml(res);
 
 				//价格排序
-				var $sequence_l = $('.sequence_l');
-				$sequence_l.on('click','.jiage',function(){
-					sort();
-					createHtml(res);//排序已经排好，但这里的生成结构一直不生效，【待解决】
-				})
-
-				//封装价格排序
-				function sort(){
-					var dt = res.data;
-					for(var i=0;i<dt.length;i++){
-						for(var j=0;j<dt.length-i-1;j++){
-							if(dt[j].price  > dt[j+1].price){
-								var tem = dt[j];
-								dt[j] = dt[j+1];
-								dt[j+1] = tem;
+				var $jiage = $('.jiage');
+				$jiage.on('click',function(){
+					// sort();
+					for(var i=0;i<res.data.length;i++){
+						for(var j=0;j<res.data.length-i-1;j++){
+							if(res.data[j].price  > res.data[j+1].price){
+								var tem = res.data[j];
+								res.data[j] = res.data[j+1];
+								res.data[j+1] = tem;
 							}
 						}
-					}
-					return dt;
-				}
+					}console.log(res.data)
+					createHtml(res);//排序已经排好，但这里的生成结构一直不生效
+				})
 
 
 				//处理分页
@@ -154,7 +150,6 @@
 				$pageShow.html('');
 
 				
-
 				//页面显示共有多少商品
 				var $search_r = $('.search_r');//console.log($search_r)
 				$search_r.children('span').html(res.total);

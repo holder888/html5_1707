@@ -14,6 +14,9 @@ jQuery(function($){
     });
 	// ---------banner结束--------------
 
+	//读取用户名cookie
+	var cookie = document.cookie;console.log(cookie)
+
 
 	//------吸顶开始-------
 	var $xd = $('#xd');
@@ -83,7 +86,7 @@ jQuery(function($){
 			var $ul = $('<ul/>');
 			$ul.html($.map(res.data,function(item){
 				return `<li>
-					<a href="html/list.html"><img src="${item.imgurl}" title="${item.id}"></a>
+					<a href="#"><img src="${item.imgurl}" title="${item.id}"></a>
 					<h4>${item.title}</h4>
 					<div class="price">${item.price}</div>
 				</li>`

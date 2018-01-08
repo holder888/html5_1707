@@ -570,7 +570,7 @@
 }
 .sidebar .goodsList li .goodsNumber{
   position:absolute;
-  left:0px;
+  left:80px;
   bottom:0;
 }
 .sidebar .goodsList li .btnDelete{

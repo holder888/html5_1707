@@ -43,7 +43,7 @@
 					zoom_area_width:390,
 				    autoplay_interval:3000,
 				    small_thumbs:5,
-				    autoplay:true
+				    autoplay:false
 				});
 
 				//根据返回数据填写头部商品信息

@@ -84,10 +84,10 @@
 		//点击减，商品数量减1
 		$ul.on('click','.subNum',function(){
 			$(this).next()[0].value--;
-			// if($(this).next()[0].value <= 1){
-			// 	$(this).next()[0].value = 0;
-			// 	reurn;
-			// }
+			if($(this).next()[0].value < 0){
+				$(this).next()[0].value = 0;
+				return;
+			}
 			var number = $(this).next()[0].value;//input的value值
 			var prc = $(this).closest('li').find('.price').text();
 			$(this).closest('li').find('.sum').text((number*prc).toFixed(2));
